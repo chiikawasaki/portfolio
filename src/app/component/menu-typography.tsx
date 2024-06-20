@@ -2,13 +2,14 @@ import { Button, Typography } from "@mui/material";
 import "./style.css";
 type MenuTypographyProps = {
   title: string;
+  color: string;
 };
 
-const MenuTypography: React.FC<MenuTypographyProps> = ({ title }) => {
+const MenuTypography: React.FC<MenuTypographyProps> = ({ title, color }) => {
   return (
     <Button>
       <Typography
-        color={"#fff2f2"}
+        color={color}
         fontSize={20}
         sx={{
           fontFamily: "Jomolhari",

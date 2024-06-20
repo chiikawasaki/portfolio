@@ -4,7 +4,7 @@ import "./style.css";
 type MotojiSakiProps = {
   title: string;
   color: string;
-  fontsize: number;
+  fontsize: any;
   textTransform: string;
 };
 const MotojiSaki: React.FC<MotojiSakiProps> = ({
