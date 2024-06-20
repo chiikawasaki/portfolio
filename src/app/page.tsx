@@ -5,11 +5,15 @@ import ShowPortfolioArea from "./component/show-portfolio-area";
 
 const Home = () => {
   return (
-    <Box>
+    <Box position={"relative"} m={-3}>
+      <Box position={"absolute"} bottom={5} right={10}>
+        <MenuTypography title="About ＞" color="#857076" />
+      </Box>
       <Box
         position={"relative"}
         height={"60vh"}
-        m={-3}
+        m={0}
+        width={"100%"}
         sx={{
           backgroundImage: "url(/pink-sky.png)",
           backgroundSize: "cover",
@@ -17,32 +21,32 @@ const Home = () => {
         }}
       >
         <Box position={"absolute"} right={30} top={10} display={"flex"}>
-          <MenuTypography title="About" />
-          <MenuTypography title="Work" />
-          <MenuTypography title="Home" />
+          <MenuTypography title="About" color="#fff2f2" />
+          <MenuTypography title="Work" color="#fff2f2" />
+          <MenuTypography title="Home" color="#fff2f2" />
         </Box>
-        <Box pt={27} pl={15}>
+        <Box pt={27} pl={{ md: 15, xs: 5 }}>
           <MotojiSaki
             title="MOTOJI"
             color="#fff2f2"
-            fontsize={100}
+            fontsize={{ md: 100, xs: 50 }}
             textTransform="uppercase"
           />
           <MotojiSaki
             title="SAKI"
             color="#fff2f2"
-            fontsize={100}
+            fontsize={{ md: 100, xs: 50 }}
             textTransform="uppercase"
           />
         </Box>
       </Box>
       <Box
         bgcolor={"#fff2f2"}
-        pt={"30vh"}
+        pt={"20vh"}
         display={"flex"}
         textAlign={"center"}
         justifyContent={"center"}
-        sx={{ flexFlow: "column" }}
+        sx={{ flexFlow: "column", maxWidth: "100%" }}
       >
         <MotojiSaki
           title="Work"
@@ -50,9 +54,9 @@ const Home = () => {
           fontsize={45}
           textTransform="capitalize"
         />
-        <Box>
-          <ShowPortfolioArea />
-        </Box>
+      </Box>
+      <Box bgcolor={"#fff2f2"} pb={10}>
+        <ShowPortfolioArea />
       </Box>
     </Box>
   );
