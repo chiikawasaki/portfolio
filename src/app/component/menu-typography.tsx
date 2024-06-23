@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import "./style.css";
 type MenuTypographyProps = {
   title: string;
@@ -7,20 +7,22 @@ type MenuTypographyProps = {
 
 const MenuTypography: React.FC<MenuTypographyProps> = ({ title, color }) => {
   return (
-    <Button>
-      <Typography
-        color={color}
-        fontSize={20}
-        sx={{
-          fontFamily: "Jomolhari",
-          fontWeight: 400,
-          fontStyle: "normal",
-          textTransform: "capitalize",
-        }}
-      >
-        {title}
-      </Typography>
-    </Button>
+    <Link
+      href="/"
+      underline="hover"
+      color={color}
+      fontSize={20}
+      mx={1}
+      sx={{
+        textDecorationColor: { color },
+        fontFamily: "Jomolhari",
+        fontWeight: 400,
+        fontStyle: "normal",
+        textTransform: "capitalize",
+      }}
+    >
+      {title}
+    </Link>
   );
 };
 
