@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <Box position={"relative"} m={-3}>
       <Box position={"absolute"} bottom={5} right={30}>
-        <MenuTypography title="About ＞" color="#857076" />
+        <MenuTypography title="About ＞" color="#857076" href="./About" />
       </Box>
       <Box
         position={"relative"}
@@ -25,9 +25,9 @@ const Home = () => {
           top={10}
           display={"flex"}
         >
-          <MenuTypography title="About" color="#fff2f2" />
-          <MenuTypography title="Work" color="#fff2f2" />
-          <MenuTypography title="Home" color="#fff2f2" />
+          <MenuTypography title="About" color="#fff2f2" href="./About" />
+          <MenuTypography title="Work" color="#fff2f2" href="/" />
+          <MenuTypography title="Home" color="#fff2f2" href="/" />
         </Box>
         <Box pt={{ md: 27, xs: 29 }} pl={{ md: 15, xs: 5 }}>
           <MotojiSaki
