@@ -9,7 +9,7 @@ import {
 type ShowPortfolioProps = {
   image: string;
   title: string;
-  ml: number;
+  ml: any;
 };
 
 const ShowPortfolio: React.FC<ShowPortfolioProps> = ({ image, title, ml }) => {

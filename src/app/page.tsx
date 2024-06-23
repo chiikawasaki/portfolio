@@ -6,13 +6,12 @@ import ShowPortfolioArea from "./component/show-portfolio-area";
 const Home = () => {
   return (
     <Box position={"relative"} m={-3}>
-      <Box position={"absolute"} bottom={5} right={10}>
+      <Box position={"absolute"} bottom={5} right={30}>
         <MenuTypography title="About ＞" color="#857076" />
       </Box>
       <Box
         position={"relative"}
         height={"60vh"}
-        m={0}
         width={"100%"}
         sx={{
           backgroundImage: "url(/pink-sky.png)",
@@ -20,22 +19,27 @@ const Home = () => {
           backgroundPosition: "center",
         }}
       >
-        <Box position={"absolute"} right={30} top={10} display={"flex"}>
+        <Box
+          position={"absolute"}
+          right={{ md: 30, xs: 25 }}
+          top={10}
+          display={"flex"}
+        >
           <MenuTypography title="About" color="#fff2f2" />
           <MenuTypography title="Work" color="#fff2f2" />
           <MenuTypography title="Home" color="#fff2f2" />
         </Box>
-        <Box pt={27} pl={{ md: 15, xs: 5 }}>
+        <Box pt={{ md: 27, xs: 29 }} pl={{ md: 15, xs: 5 }}>
           <MotojiSaki
             title="MOTOJI"
             color="#fff2f2"
-            fontsize={{ md: 100, xs: 50 }}
+            fontsize={{ md: 100, xs: 65 }}
             textTransform="uppercase"
           />
           <MotojiSaki
             title="SAKI"
             color="#fff2f2"
-            fontsize={{ md: 100, xs: 50 }}
+            fontsize={{ md: 100, xs: 65 }}
             textTransform="uppercase"
           />
         </Box>
