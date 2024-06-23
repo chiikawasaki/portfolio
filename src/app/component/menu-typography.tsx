@@ -3,12 +3,17 @@ import "./style.css";
 type MenuTypographyProps = {
   title: string;
   color: string;
+  href: string;
 };
 
-const MenuTypography: React.FC<MenuTypographyProps> = ({ title, color }) => {
+const MenuTypography: React.FC<MenuTypographyProps> = ({
+  title,
+  color,
+  href,
+}) => {
   return (
     <Link
-      href="/"
+      href={href}
       underline="hover"
       color={color}
       fontSize={20}
