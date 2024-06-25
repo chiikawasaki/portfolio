@@ -38,7 +38,7 @@ const AboutFirstView = () => {
         />
       </Box>
       <Box display={"flex"} bgcolor={"#fff2f2"} justifyContent={"center"}>
-        <Box mr={10}>
+        <Box mr={10} mb={5}>
           <Image
             src={"/my-photo.png"}
             alt="自分の写真"
@@ -46,12 +46,33 @@ const AboutFirstView = () => {
             height={400}
           />
         </Box>
-        <MotojiSaki
-          title="Motoji Saki"
-          color="#857076"
-          fontsize={45}
-          textTransform="capitalize"
-        />
+        <Box ml={5}>
+          <MotojiSaki
+            title="Motoji Saki"
+            color="#857076"
+            fontsize={45}
+            textTransform="capitalize"
+          />
+          <Typography
+            mt={5}
+            lineHeight={2}
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+          >
+            2003年神奈川県出身。2022年に鷗友学園女子中学高等学校を卒業後、
+            <br />
+            成蹊大学理工学部コンピュータサイエンス専攻に進学し、
+            <br />
+            コンピュータサイエンスについて学ぶ。
+            <br />
+            大学3年4月にプログラミングサークルであるPeachtechに入部。
+            <br />
+            Webアプリ開発について1から学びを深める。
+          </Typography>
+        </Box>
       </Box>
     </>
   );
