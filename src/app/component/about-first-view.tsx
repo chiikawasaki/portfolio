@@ -15,6 +15,7 @@ const AboutFirstView = () => {
         <Box
           position={"absolute"}
           right={{ md: 30, xs: 25 }}
+          top={10}
           bgcolor={"#fff2f2"}
         >
           <MenuTypography title="About" color="#857076" href="./About" />
@@ -23,7 +24,7 @@ const AboutFirstView = () => {
         </Box>
       </Box>
       <Box
-        display={"flex"}
+        display={{ md: "flex" }}
         textAlign={"center"}
         justifyContent={"center"}
         bgcolor={"#fff2f2"}
@@ -37,13 +38,17 @@ const AboutFirstView = () => {
           textTransform="capitalize"
         />
       </Box>
-      <Box display={"flex"} bgcolor={"#fff2f2"} justifyContent={"center"}>
+      <Box
+        display={{ md: "flex" }}
+        bgcolor={"#fff2f2"}
+        justifyContent={"center"}
+      >
         <Box mr={10} mb={5}>
           <Image
             src={"/my-photo.png"}
             alt="自分の写真"
-            width={400}
-            height={400}
+            width={370}
+            height={370}
           />
         </Box>
         <Box ml={5}>
@@ -61,6 +66,7 @@ const AboutFirstView = () => {
             sx={{ fontOpticalSizing: "auto" }}
             fontStyle={"normal"}
             fontWeight={"bold"}
+            bgcolor={"#fff2f2"}
           >
             2003年神奈川県出身。2022年に鷗友学園女子中学高等学校を卒業後、
             <br />

@@ -22,7 +22,7 @@ const Home = () => {
         <Box
           position={"absolute"}
           right={{ md: 30, xs: 25 }}
-          top={10}
+          top={20}
           display={"flex"}
         >
           <MenuTypography title="About" color="#fff2f2" href="./About" />
