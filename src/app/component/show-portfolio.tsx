@@ -4,15 +4,22 @@ import {
   CardMedia,
   Box,
   Typography,
+  Link,
 } from "@mui/material";
 
 type ShowPortfolioProps = {
   image: string;
   title: string;
   ml: any;
+  href: string;
 };
 
-const ShowPortfolio: React.FC<ShowPortfolioProps> = ({ image, title, ml }) => {
+const ShowPortfolio: React.FC<ShowPortfolioProps> = ({
+  image,
+  title,
+  ml,
+  href,
+}) => {
   return (
     <Box>
       <Box
@@ -24,18 +31,30 @@ const ShowPortfolio: React.FC<ShowPortfolioProps> = ({ image, title, ml }) => {
         px={18}
         pt={15}
       >
-        <Card sx={{ minWidth: 345, height: 300, objectFit: "cover" }}>
-          <CardActionArea
-            sx={{ width: "100%", height: "100%", bgcolor: "#FBDDDD" }}
+        <Link href={href}>
+          <Card
+            sx={{
+              minWidth: 345,
+              height: 300,
+              objectFit: "cover",
+            }}
           >
-            <CardMedia
-              component="img"
-              height="160"
-              image={image}
-              alt="my-portfolio-site-image"
-            />
-          </CardActionArea>
-        </Card>
+            <CardActionArea
+              sx={{
+                width: "100%",
+                height: "100%",
+                bgcolor: "#FBDDDD",
+              }}
+            >
+              <CardMedia
+                component="img"
+                height="160"
+                image={image}
+                alt="my-portfolio-site-image"
+              />
+            </CardActionArea>
+          </Card>
+        </Link>
         <Box
           display={"flex"}
           alignItems={"center"}

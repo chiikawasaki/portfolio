@@ -8,11 +8,13 @@ const ShowPortfolioArea = () => {
       <ShowPortfolio
         image="./test1.png"
         title="このサイトについて"
+        href="./MyPortfolio"
         ml={{ md: 30, xs: 17 }}
       />
       <ShowPortfolio
         image="./peachtechtuto-image.png"
         title="Peachtechチュートリアルの作成"
+        href="/"
         ml={{ md: 25, xs: 10 }}
       />
     </Box>
