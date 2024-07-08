@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import MenuTypography from "./component/menu-typography";
+import MenuTypography from "./component/menu-button";
 import MotojiSaki from "./component/motoji-saki";
 import ShowPortfolioArea from "./component/show-portfolio-area";
 
@@ -26,7 +26,6 @@ const Home = () => {
           display={"flex"}
         >
           <MenuTypography title="About" color="#fff2f2" href="./About" />
-          <MenuTypography title="Work" color="#fff2f2" href="/" />
           <MenuTypography title="Home" color="#fff2f2" href="/" />
         </Box>
         <Box pt={{ md: 27, xs: 29 }} pl={{ md: 15, xs: 5 }}>
