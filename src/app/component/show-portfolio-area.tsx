@@ -14,7 +14,7 @@ const ShowPortfolioArea = () => {
       <ShowPortfolio
         image="./peachtechtuto-image.png"
         title="Peachtechチュートリアルの作成"
-        href="/"
+        href="./PeachTechTutorial"
         ml={{ md: 25, xs: 10 }}
       />
     </Box>

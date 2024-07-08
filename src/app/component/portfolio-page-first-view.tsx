@@ -1,16 +1,23 @@
 import { Box, Typography } from "@mui/material";
-import MenuTypography from "./menu-typography";
+import MenuTypography from "./menu-button";
 import MotojiSaki from "./motoji-saki";
-import Image from "next/image";
 
 type PortfolioPageFristViewProps = {
   title: string;
   src: string;
+  explanation: string;
+  language: string;
+  skill: string;
+  term: string;
 };
 
 const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
   title,
   src,
+  explanation,
+  language,
+  skill,
+  term,
 }) => {
   return (
     <>
@@ -27,7 +34,6 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
           bgcolor={"#fff2f2"}
         >
           <MenuTypography title="About" color="#857076" href="./About" />
-          <MenuTypography title="Work" color="#857076" href="/" />
           <MenuTypography title="Home" color="#857076" href="/" />
         </Box>
       </Box>
@@ -48,39 +54,81 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
       </Box>
       <Box bgcolor={"#fff2f2"}>
         <Box
-          mr={10}
           mb={5}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          sx={{ flexFlow: "column" }}
         >
-          <Image
+          <img
             src={src}
             alt="見本画像"
-            width={1000}
-            height={600}
-            style={{ boxShadow: "10px 10px 15px -10px" }}
-            className="image"
+            width={"80%"}
+            style={{ boxShadow: "0.5px 1px 5px -2px gray" }}
           />
         </Box>
-        <Box
-          ml={5}
-          display={"flex"}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
+        <Box ml={5} display={{ md: "flex" }} justifyContent={"center"} mt={15}>
           <Typography
-            mt={5}
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+            fontSize={25}
+            mr={{ md: 20 }}
+          >
+            制作概要
+          </Typography>
+          <Typography
+            width={{ md: "50%", xs: "80%" }}
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+            pt={1.5}
+            lineHeight={2}
+            fontSize={17}
+          >
+            {explanation}
+          </Typography>
+        </Box>
+        <Box ml={{ md: 40, xs: 5 }} py={10}>
+          <Typography
             color={"#857076"}
             fontFamily={"Noto Serif JP"}
             sx={{ fontOpticalSizing: "auto" }}
             fontStyle={"normal"}
             fontWeight={"bold"}
           >
-            制作概要
+            使用言語：{language}
+          </Typography>
+          <Typography
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+          >
+            使用技術：{skill}
+          </Typography>
+          <Typography
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+          >
+            制作期間：{term}
           </Typography>
         </Box>
+      </Box>
+      <Box
+        display={"flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        bgcolor={"#fff2f2"}
+      >
+        <Box height={1.5} width={"90vw"} bgcolor={"#857076"} />
       </Box>
     </>
   );
