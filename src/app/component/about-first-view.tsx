@@ -1,7 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import MenuTypography from "./menu-typography";
+import MenuTypography from "./menu-button";
 import Image from "next/image";
 import MotojiSaki from "./motoji-saki";
+import { Link } from "react-scroll";
 
 const AboutFirstView = () => {
   return (
@@ -19,7 +20,7 @@ const AboutFirstView = () => {
           bgcolor={"#fff2f2"}
         >
           <MenuTypography title="About" color="#857076" href="./About" />
-          <MenuTypography title="Work" color="#857076" href="/" />
+
           <MenuTypography title="Home" color="#857076" href="/" />
         </Box>
       </Box>
@@ -67,6 +68,7 @@ const AboutFirstView = () => {
             fontStyle={"normal"}
             fontWeight={"bold"}
             bgcolor={"#fff2f2"}
+            id={"aiueo"}
           >
             2003年神奈川県出身。2022年に鷗友学園女子中学高等学校を卒業後、
             <br />

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import MotojiSaki from "./motoji-saki";
 import ShowSkillArea from "./show-skill-area";
-import MenuTypography from "./menu-typography";
+import MenuTypography from "./menu-button";
 
 const SkillView = () => {
   return (
