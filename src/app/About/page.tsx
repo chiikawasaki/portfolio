@@ -4,7 +4,7 @@ import SkillView from "../component/skill-view";
 
 const page = () => {
   return (
-    <Box m={-1}>
+    <Box>
       <AboutFirstView />
       <SkillView />
     </Box>
