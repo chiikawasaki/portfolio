@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import MenuTypography from "./menu-button";
 import Image from "next/image";
 import MotojiSaki from "./motoji-saki";
-import { Link } from "react-scroll";
 
 const AboutFirstView = () => {
   return (
