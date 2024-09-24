@@ -19,6 +19,7 @@ const PeachTechTutorial = () => {
           language=" HTML/CSS/TypeScript"
           skill=" React, Next.js, mui"
           term=" 2024年5月～7月上旬"
+          link="https://peach-tech-tutorial.vercel.app/"
         />
         <Box
           bgcolor={"#fff2f2"}

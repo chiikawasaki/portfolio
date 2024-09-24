@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import MenuTypography from "./menu-button";
 import MotojiSaki from "./motoji-saki";
+import Link from "next/link";
 
 type PortfolioPageFristViewProps = {
   title: string;
@@ -9,6 +10,7 @@ type PortfolioPageFristViewProps = {
   language: string;
   skill: string;
   term: string;
+  link: string;
 };
 
 const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
@@ -18,6 +20,7 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
   language,
   skill,
   term,
+  link,
 }) => {
   return (
     <>
@@ -119,6 +122,16 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
             fontWeight={"bold"}
           >
             制作期間：{term}
+          </Typography>
+          <Typography
+            color={"#857076"}
+            fontFamily={"Noto Serif JP"}
+            sx={{ fontOpticalSizing: "auto" }}
+            fontStyle={"normal"}
+            fontWeight={"bold"}
+          >
+            URL:　
+            <Link href={link}>{link}</Link>
           </Typography>
         </Box>
       </Box>

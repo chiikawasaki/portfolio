@@ -17,6 +17,7 @@ const MyPortfolio = () => {
           language=" HTML/CSS/TypeScript"
           skill=" React, Next.js, mui"
           term=" 2024年6月～7月上旬"
+          link="https://saki-motoji-portfolio.vercel.app/"
         />
         <Box
           bgcolor={"#fff2f2"}
