@@ -24,7 +24,13 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         color={"#857076"}
         sx={{ textDecorationColor: "#857076" }}
       >
-        <Typography>{title}</Typography>
+        <Typography
+          fontFamily={"Noto Serif JP"}
+          sx={{ fontOpticalSizing: "auto" }}
+          fontStyle={"normal"}
+        >
+          {title}
+        </Typography>
       </Link>
     </Box>
   );
