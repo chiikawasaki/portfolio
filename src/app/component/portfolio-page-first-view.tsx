@@ -10,7 +10,7 @@ type PortfolioPageFristViewProps = {
   language: string;
   skill: string;
   term: string;
-  link: string;
+  link?: string;
 };
 
 const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
@@ -123,16 +123,17 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
           >
             制作期間：{term}
           </Typography>
-          <Typography
-            color={"#857076"}
-            fontFamily={"Noto Serif JP"}
-            sx={{ fontOpticalSizing: "auto" }}
-            fontStyle={"normal"}
-            fontWeight={"bold"}
-          >
-            URL:　
-            <Link href={link}>{link}</Link>
-          </Typography>
+          {link ? (
+            <Typography
+              color={"#857076"}
+              fontFamily={"Noto Serif JP"}
+              sx={{ fontOpticalSizing: "auto" }}
+              fontStyle={"normal"}
+              fontWeight={"bold"}
+            >
+              URL:　 <Link href={link}>{link}</Link>
+            </Typography>
+          ) : null}
         </Box>
       </Box>
       <Box
