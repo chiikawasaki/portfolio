@@ -11,6 +11,7 @@ type PortfolioPageFristViewProps = {
   skill: string;
   term: string;
   link?: string;
+  github?: string;
 };
 
 const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
@@ -21,6 +22,7 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
   skill,
   term,
   link,
+  github,
 }) => {
   return (
     <>
@@ -132,6 +134,17 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
               fontWeight={"bold"}
             >
               URL:　 <Link href={link}>{link}</Link>
+            </Typography>
+          ) : null}
+          {github ? (
+            <Typography
+              color={"#857076"}
+              fontFamily={"Noto Serif JP"}
+              sx={{ fontOpticalSizing: "auto" }}
+              fontStyle={"normal"}
+              fontWeight={"bold"}
+            >
+              GitHub:　 <Link href={github}>{github}</Link>
             </Typography>
           ) : null}
         </Box>
