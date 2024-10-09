@@ -12,6 +12,8 @@ type PortfolioPageFristViewProps = {
   term: string;
   link?: string;
   github?: string;
+  qiita?: string;
+  article?: string;
 };
 
 const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
@@ -23,6 +25,8 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
   term,
   link,
   github,
+  qiita,
+  article,
 }) => {
   return (
     <>
@@ -50,12 +54,17 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
         pt={30}
         pb={10}
       >
-        <MotojiSaki
-          title={title}
-          color="#857076"
-          fontsize={45}
-          textTransform="capitalize"
-        />
+        <Typography
+          color={"#857076"}
+          fontFamily={"Noto Serif JP"}
+          sx={{ fontOpticalSizing: "auto" }}
+          fontStyle={"normal"}
+          fontWeight={"bold"}
+          fontSize={40}
+          mb={10}
+        >
+          {title}
+        </Typography>
       </Box>
       <Box bgcolor={"#fff2f2"}>
         <Box
@@ -145,6 +154,28 @@ const PortfolioPageFristView: React.FC<PortfolioPageFristViewProps> = ({
               fontWeight={"bold"}
             >
               GitHub:　 <Link href={github}>{github}</Link>
+            </Typography>
+          ) : null}
+          {qiita ? (
+            <Typography
+              color={"#857076"}
+              fontFamily={"Noto Serif JP"}
+              sx={{ fontOpticalSizing: "auto" }}
+              fontStyle={"normal"}
+              fontWeight={"bold"}
+            >
+              Qiitaでの参加記事:　 <Link href={qiita}>{qiita}</Link>
+            </Typography>
+          ) : null}
+          {article ? (
+            <Typography
+              color={"#857076"}
+              fontFamily={"Noto Serif JP"}
+              sx={{ fontOpticalSizing: "auto" }}
+              fontStyle={"normal"}
+              fontWeight={"bold"}
+            >
+              インターン開催記事:　 <Link href={article}>{article}</Link>
             </Typography>
           ) : null}
         </Box>
