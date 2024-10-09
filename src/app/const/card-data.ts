@@ -11,4 +11,9 @@ export const cardData: CardDataProps[] = [
     title: "Peachtechチュートリアルの作成",
     href: "./PeachTechTutorial",
   },
+  {
+    image: "./e-seikathu-LP.png",
+    title: "リタイアホームサーチ",
+    href: "./internship-e-seikathu",
+  },
 ];
