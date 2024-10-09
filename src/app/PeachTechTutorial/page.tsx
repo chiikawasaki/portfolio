@@ -95,7 +95,11 @@ const PeachTechTutorial = () => {
         </Box>
       </Box>
       <Box position={"absolute"} bottom={3} right={3}>
-        <MenuButton title="Home ＞" color="#857076" href="/" />
+        <MenuButton
+          title="Home ＞"
+          color="#857076"
+          href="/internship-e-seikathu"
+        />
       </Box>
       <Box position={"absolute"} bottom={3} left={3}>
         <MenuButton title="＜ Back" color="#857076" href="/MyPortfolio" />
