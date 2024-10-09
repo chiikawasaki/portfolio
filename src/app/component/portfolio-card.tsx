@@ -1,4 +1,5 @@
 import { Box, Typography, Link } from "@mui/material";
+import styles from "./portfolio-card.module.css";
 
 type PortfolioCardProps = {
   image: string;
@@ -15,7 +16,11 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     <Box>
       <Link href={href}>
         <Box boxShadow={2}>
-          <img src={image} alt={"作品イメージ"} width={504} height={314} />
+          <img
+            src={image}
+            alt={"作品イメージ"}
+            className={styles.responsiveImage}
+          />
         </Box>
       </Link>
       <Link

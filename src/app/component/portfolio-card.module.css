@@ -1,0 +1,12 @@
+/* PCのデフォルトのスタイル */
+.responsiveImage {
+  width: 500px;
+  height: 300px;
+}
+
+/* スマートフォン表示用のスタイル */
+@media screen and (max-width: 768px) {
+  .responsiveImage {
+    width: 100%; /* スマートフォンでは画面幅いっぱいに表示 */
+  }
+}
